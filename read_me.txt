@@ -1,0 +1,22 @@
+$Id: ReadMe.txt,v 1.1 2003/10/15 02:05:50 kousuke Exp $
+NetDictionaryプロジェクト(http://www.webservice.jp/netdict/index.html)の
+クイズICDのxoops-module移植版です。
+■注意
+このモジュール自体はGPLとして配布します。
+ただし、NetDictionaryのWebServiceは以下のことを禁止事項としています。
+・商用目的での使用
+・実運用を目的とする使用
+・データを集中的、組織的に取得するような使用方法
+・常識の範囲を大きく逸脱して、サーバに負荷をかけるようなアクセス
+このことを十分考慮し、禁止事項に触れないようにしてご利用ください。
+■連絡先
+http://xoops-modules.sourceforge.jp/
+http://sourceforge.jp/projects/xoops-modules/
+■インストール
+$xoops_home/modules配下にこのフォルダをコピーしてください。
+普通のモジュールと同じだと思います。
+■メモ
+どーせ日本語しか使わないので、日本語を直書きしています。
+■変更履歴
+2003-10-25
+やっと＠ITからプログラム公開OKの返事が来た

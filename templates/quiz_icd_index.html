@@ -1,0 +1,32 @@
+<!-- begin of quiz_icd block -->
+<table class="outer" cellspacing="1" width="95%">
+<tr class="outer">
+<th>クイズICD</th>
+</td>
+<tr class="even"><td>
+<h2>クイズICDとは?</h2><br>
+　クイズICD （Insider's Computer Dictionary）は、コンピュータ用語の解説本文から、その用語の見出し語を当てるゲームです。つまり、見出し語→解説本文という、通常の辞書の引き方を逆にしたものです。<br>
+<a href="http://www.webservice.jp/netdict/index.html" target="_blank">NetDictionaryプロジェクト</a>の<a href="http://www.webservice.jp/netdict/quizicd/" target="_blank">クイズICD</a>がモトネタです(そのままではありません)。
+</td>
+</tr>
+<tr class="odd"><td>
+<h2>注意事項</h2><br>
+<li>xoops移植版では登録ユーザのみクイズができます(実装の手抜きをするため)。
+<li>途中でやり直しはできません(実装の手抜きをするため)。
+<li>結果は公表されてしまいます。結果は公表されてしまいます。結果は公表されてしまいます。
+</td></tr>
+<tr class="even">
+<td>
+<{if isset($xoopsUser) }>
+それでは、クイズICDをはじめましょう。下のボタンをクリックしてください。
+<form method="post" action="index.php">
+<input type="hidden" name="start" value="start">
+<center><input type="submit" name="開始" value="開始"></center>
+</form>
+<{else}>
+<center><h2>参加するにはログインしてください！<h2></center>
+<{/if}>
+</td>
+</tr>
+</table>
+<!-- end of quiz_icd block -->

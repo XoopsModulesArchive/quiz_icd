@@ -1,0 +1,22 @@
+<!-- begin of quiz_icd block -->
+<table class="outer" cellspacing="1" width="95%">
+<{if isset($all_result) }>
+<tr class="<{cycle values="even,odd"}>"><td>
+<h2>ランキング</h2><br>
+<table border="0">
+<tr><th>ランキング</th><th>ユーザ</th><th>回数</th><th>ジャンル</th><th>正解数</th><th>総回答時間</th>
+<{foreach item=result from=$all_result}>
+<tr>
+<td><{$result.ranking}></td>
+<td><{$result.uname}></td>
+<td><{$result.number_of_times}></td>
+<td><{$result.category}></td>
+<td><{$result.correctNum}></td>
+<td><{$result.quiz_time}></td>
+</tr>
+<{/foreach}>
+</table>
+</td></tr>
+<{/if}>
+</table>
+<!-- end of quiz_icd block -->

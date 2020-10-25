@@ -1,0 +1,65 @@
+<!-- begin of quiz_icd block -->
+<table class="outer" cellspacing="1" width="95%">
+<tr class="outer">
+<th>クイズICD</th>
+</td>
+<tr class="<{cycle values="even,odd"}>"><td>
+<{$main_message}>
+</td></tr>
+<{if isset($is_correct) }>
+<tr class="<{cycle values="even,odd"}>"><td>
+<h2><font color="red">正解！！！</font></h2><br>
+あなたの回答: <{$answer}><br><br>
+正解：<{foreach item=ans from=$correct_answer}><li><{$ans}><{/foreach}><br>
+<div align="right">(<{$question_id}>)</div>
+</td></tr>
+<{elseif isset($correct_answer) and is_array($correct_answer) and count($correct_answer) gt 0 }>
+<tr class="<{cycle values="even,odd"}>"><td>
+<h2>正解は....</h2><br>
+<{foreach item=ans from=$correct_answer}><li><{$ans}><{/foreach}><br>
+あなたの回答: <{$answer}>
+<div align="right">(<{$question_id}>)</div>
+</td></tr>
+<{/if}>
+<{if isset($correctNum) }>
+<tr class="<{cycle values="even,odd"}>"><td>
+<h2>正解数:<{$correctNum}>問(10問中)</h2>
+</td></tr>
+<{/if}>
+<{if isset($ranking) }>
+<tr class="<{cycle values="even,odd"}>"><td>
+<h2>順位：<{$ranking}></h2>
+</td></tr>
+<{/if}>
+<{if isset($question) }>
+<tr class="<{cycle values="even,odd"}>"><td>
+<h2><{$category}>問題(第<{$question_index}>問)</h2><br>
+<{$question}>
+</td></tr>
+<tr class="<{cycle values="even,odd"}>"><td>
+<form method="post" action="index.php">
+答え:<input type="text" name="a" size=60>
+<input type="submit" name="送信" value="送信">
+</form>
+</td></tr>
+<{/if}>
+<{if isset($all_result) }>
+<tr class="<{cycle values="even,odd"}>"><td>
+<h2>全結果</h2><br>
+<table border="0">
+<tr><th>回数</th><th>ジャンル</th><th>正解数</th><th>開始時間</th><th>終了時間</th><th>総回答時間</th>
+<{foreach item=result from=$all_result}>
+<tr>
+<td><{$result.number_of_times}></td>
+<td><{$result.category}></td>
+<td><{$result.collectNum}></td>
+<td><{$result.start_date}></td>
+<td><{$result.end_date}></td>
+<td><{$result.quiz_time}></td>
+</tr>
+<{/foreach}>
+</table>
+</td></tr>
+<{/if}>
+</table>
+<!-- end of quiz_icd block -->
